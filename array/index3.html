@@ -1,0 +1,77 @@
+=<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    const Product = [
+        {
+            name : "Bread", 
+            Category : "Convenience Product",
+            Price : "50rs",
+            Rating : 4.5
+        },
+        {
+            name : "Milk", 
+            Category : "Convenience Product",
+            Price : "80rs",
+            Rating : 4.5
+        },
+        {
+            name : "Shirt", 
+            Category : "Shopping Product",
+            Price : "500rs",
+            Rating : 4
+        },
+        {
+            name : " trousers", 
+            Category : "Shopping Product",
+            Price : "600rs",
+            Rating : 4
+        },
+        {
+            name : "TV", 
+            Category : "Shopping Product",
+            Price : "10000rs",
+            Rating : 4.5
+        },
+
+        {
+            name : "Micro Wave", 
+            Category : "Shopping Product",
+            Price : "8000rs",
+            Rating : 4
+        },
+        {
+            name : " NIKE AIR JORDAN ", 
+            Category : "Specialty Products",
+            Price : "15000rs",
+            Rating : 4
+        }
+    ]
+
+    const Result = Product.filter(Categ => Categ.Category == "Shopping Product" )
+    .map(Categ => { const avg = Product.reduce((sum, Categ) => sum + Categ.Rating,0) / Product.length; 
+
+        return avg;
+    })
+
+    .map(categ => { const total = Product.reduce((sum, categ) => sum + categ.Rating,0 ) > Product.Rating;
+        return total;
+    })
+
+
+    console.log(Result);
+
+    
+    
+
+</script>
+
+</html>

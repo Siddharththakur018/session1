@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        let fruits = ['apple', 'banana', 'orange', 'grape'];
+        console.log(fruits);
+        
+        //push
+        fruits.push('kiwi');
+        console.log(fruits);
+        
+        //pop
+        fruits.pop();
+        console.log(fruits);
+
+        //shift
+        fruits.shift();
+        console.log(fruits);
+
+        //unshift
+        fruits.unshift('kiwi');
+        console.log(fruits);
+        
+        //includes
+        console.log(fruits.includes('banana'));
+        console.log(fruits.includes('apple'));
+        
+
+        //indexOf
+        console.log(fruits.indexOf('banana', 'apple'));
+        console.log(fruits.indexOf('hdhdh'));
+
+
+        //join
+        console.log(fruits.join(","));
+        console.log(fruits.indexOf('banana'));
+        
+        console.log(fruits);
+        
+        let numbers = [1,2,3,4];
+        console.log(numbers);
+        
+        console.log(numbers.join(''));
+        console.log(numbers.indexOf(3));
+        
+        
+        //slice
+        let newFruits = fruits.slice(1,5);
+        console.log(newFruits);
+
+        //splice remove 
+        fruits.splice(1,2);
+
+        console.log(fruits);
+
+        console.log(fruits);
+        
+        console.log(fruits.includes('banana'));
+
+
+
+
+        
+        
+
+        
+        
+        
+    </script>
+</body>
+</html>

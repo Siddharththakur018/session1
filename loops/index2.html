@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container{
+            display: flex;
+            /* flex-direction: column; */
+            flex-wrap: wrap;
+            gap: 10px;
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+        .flex-item{
+            background-color: lightblue;
+            flex: 1 1 200px;
+            padding: 20px;
+            text-align: center;
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            background-color: #f9f9f9;
+            padding: 4px 10px 12px 20px;
+            margin-top: 20px;
+            border: 1px solid;
+        }
+        .grid-item{
+            background-color: lightgreen;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .padding-example{
+            padding: 100px 20%;
+            background-color: #ffe0b2;
+            margin-top: 20px;
+        }
+
+        .box-shadow{
+            width: 200px;
+            height: 100px;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 1px 3px 60px 90px rgba(0,0,0,0.3);
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .vh-example{
+            height: 100vh;
+            background-color: #d1c4e9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .bg-cover{
+            background-image: url('https://via');
+            background-size: cover;
+            background-position: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Responsive with flexbox</h2>
+    <div class="flex-container">
+        <div class="flex-item">Flex 1</div>
+        <div class="flex-item">
+            <a href="">home</a>
+            <a href="">about</a>
+            <a href="">contact</a>
+            <a href="">more</a>
+        </div>
+        <div class="flex-item">Flex 2</div>
+        
+    </div>
+
+    <h2>Responsive with grid</h2>
+    <div class="grid-container">
+        <div class="grid-item">Grid 1</div>
+        <div class="grid-item">Grid 2</div>
+        <div class="grid-item">Grid 3</div>
+    </div>
+
+    <h2>Padding</h2>
+    <div class="padding-example">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, eligendi.
+    </div>
+
+    <h2>Box shadow</h2>
+    <div class="box-shadow">Shadow Box</div>
+
+    <h2>100vh</h2>
+    <div class="vh-example">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, saepe.</div>
+
+
+    <h2>em vs rem</h2>
+
+    <h1>Background size</h1>
+    <div class="bg-cover">
+        background cover
+    </div>
+</body> 
+</html>

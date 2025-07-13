@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //let
+        let a = 2;
+        console.log(a)
+
+        a=3; //cannot be redeclared but can be reassigned 
+        console.log(a);
+
+        //var
+        var b = 5;
+        console.log(b);
+
+        var b = 91; //var either can be redeclared or reassigned
+        console.log(b); 
+        
+        //creating a object
+        var student={
+            name:"Karandeep",
+            age:20,
+            course:"BCA",
+            city:"Delhi",
+            isadmin:"yes",
+            hobbies:['Reading','Sleeping','Eating']
+        }
+        console.log(student);
+
+        console.log(student.name);
+        console.log(student.age);
+
+        console.log(student['course']);
+        console.log(student["city"]);
+        
+        //modifying data
+        student.age=21;
+        console.log(student);
+
+        student.name="Karan";
+        console.log(student);
+        
+        //adding new key to the object
+        student.surname='Singh';
+        console.log(student);
+
+        student.country='India';
+        console.log(student);
+        
+        //deleting a key
+        delete student.isadmin;
+        console.log(student);
+
+        delete student.city;
+        console.log(student);
+        
+        //nested object
+        var person={
+            name:"Kartikey",
+            age:20,
+            marks:{
+                Java:51,
+                CPP:49,
+                SE:50
+            }
+        }
+        console.log(person);
+        console.log(person.marks);
+        console.log(person.marks.Java);
+        
+        
+        let product=[
+            {
+                Name:"Lenevo", //lenevo laptops in these price range
+                Category:"Laptops",
+                Price: [100], 
+                Rating:4.3
+            },
+            {
+                Name:"Samsung",//samsung mobiles in these price range
+                Category:"Mobiles",
+                Price:[200], //number
+                Rating:4.7
+            },
+            {
+                Name:"Oneplus",//oneplus mobiles in these price range
+                Category:"Mobiles",
+                Price:[300],
+                Rating:4.3
+            },
+            {
+                Name:"Boat",//boat earphones in these price range
+                Category:"Earphones",
+                Price:40,
+                Rating:4.3
+            },
+            {
+                Name:"HP",//hp laptops in these price range
+                Category:"Laptops",
+                Price:[500],
+                Rating:4.3
+            },
+            {
+                Name:"Acer",//acer laptops in these price range
+                Category:"Laptops",
+                Price:[600],
+                Rating:4.3
+            },
+            // {
+            //     Name:"Oppo",//oppo mobiles in these price range
+            //     Category:"Mobiles",
+            //     Price:[25000,30000,36000,42000],
+            //     Rating:4.3
+            // },
+            // {
+            //     Name:"Oppo",//oppo earphones in these price range
+            //     Category:"Earphones",
+            //     Price:[1699,1799,1999,2000],
+            //     Rating:4.3
+            // },
+            // {
+            //     Name:"Noise",//noise earphones in these price range
+            //     Category:"Earphones",
+            //     Price:[1100,1240,1500,1600],
+            //     Rating:4.3
+            // },
+        ]
+
+
+        // console.log(product);
+
+        const output=product.filter(cat => cat.Category === "Mobiles").map(cat => {
+            const avg=cat.Price.reduce((sum,price) => sum + price,0)
+            return avg;
+            // return avg ;
+        })
+        
+        console.log(output);
+
+        const prices = [200, 300, 400];
+        console.log(prices.length); 
+
+
+        //sum of all array
+
+        100,
+        200,
+        300,
+        400,
+        500
+
+        [100,200,300,400,500]
+
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Grid</h2>
+
+  <div style="
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+  border: 2px solid black;
+  padding: 20px;
+  ">
+    <div style="background: lightblue; text-align: center;">
+      Card1
+    </div>
+    <div style="background: lightcoral;">
+      Card2
+    </div>
+    <div style="background: lightgreen;">
+      Card3
+    </div>
+    <div style="background: lightpink;">
+      Card4
+    </div>
+    <div style="background: peachpuff;">
+      Card5
+    </div>
+    <div style="background: lavender;">
+      Card6
+    </div>
+    <div style="background: khaki;">
+      Card7
+    </div>
+    <div style="background: plum;">
+      Card8
+    </div>
+    <div style="background: powderblue;">
+      Card9
+    </div>
+  </div>
+
+  <h2>Grid template area</h2>
+  <div style="
+  display: grid;
+  grid-template-columns:  1fr 2fr;
+  grid-template-areas: 
+  'header content'
+  'sidebar content'
+  'footer content'
+  ;
+  ">
+    <div
+    style="border: 1px solid; grid-area: header;"
+    >
+      Header
+    </div>
+    <div  style="border: 1px solid; grid-area: sidebar;">
+      Sidebar
+    </div>
+    <div  style="border: 1px solid; grid-area: content;">
+      Main Content
+    </div>
+    <div  style="border: 1px solid; grid-area: footer;">
+      Footer
+    </div>
+  </div>
+
+
+  <div style="
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+  height: 150px;
+  border: 2px dashed green;
+  margin-top: 30px;
+  align-items: start;
+  justify-items:start;
+  ">
+    <div style="background: #ffb; border: 1px solid;">
+      Item 1
+    </div>
+    <div style="background: #ffd;">
+      Item 2
+    </div>
+    <div style="background: #dff;">
+      Item 3
+    </div>
+  </div>
+
+
+
+  
+</body>
+</html>

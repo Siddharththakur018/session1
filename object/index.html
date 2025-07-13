@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="script.js"></script>
+    <script>
+
+        let person = {
+            name: "Kartik",
+            age: 21,
+            email: "kartik@example.com",
+            isAdmin: true,
+            hobbies: ["redaing", "coding", "music"]
+        }
+
+        console.log(person);
+        console.log(person.name);
+        console.log(person["email"]);
+
+        // modify object value
+        person.age = 26;
+        console.log(person);
+        person["email"] = "kartik123@gmail.com"
+        console.log(person);
+        
+        //delete object  value
+        delete person.isAdmin;
+        console.log(person);
+
+        //add object value
+        person.city = "Mumbai";
+        console.log(person);
+        
+
+        //nested objects
+        // let student = {
+        //     name: "Shreyansh",
+        //     marks: {
+        //         math: 80,
+        //         science: 90
+        //     }
+        // }
+
+        // console.log(student.marks.science);
+
+
+        // const student = [
+        //     {
+        //         name: "Ravi",
+        //         age: 22,
+        //         score: 66
+        //     },
+        //     {
+        //         name: "Shreya",
+        //         age: 29,
+        //         score: 99
+        //     },
+        //     {
+        //         name: "Aman",
+        //         age: 24,
+        //         score: 12
+        //     },
+        //     {
+        //         name: "Aman",
+        //         score: 82
+        //     }
+        // ]
+
+        // const name = student.map(s => s.age);
+        // console.log(name);
+        
+        // const topper = student.filter(s => s.score > 80);
+        // console.log(topper);
+        
+        
+        // const total = student.reduce((sum, s) => sum + s.score,0);
+        // console.log(total);
+        
+        // const highScore = student.find(s => s.score < 70);
+        // console.log(highScore);
+        
+        
+        // mix of map filter and reduce
+
+
+        const student = [
+            {
+                name: "Ravi",
+                age: 22,
+                marks: [66,73,29,103,82]
+            },
+            {
+                name: "Shreya",
+                age: 29,
+                marks: [99,73,29,103,82]
+            },
+            {
+                name: "Aman",
+                age: 24,
+                marks: [12,73,29,103,82]
+            },
+            {
+                name: "Aman",
+                age:12,
+                marks: [82,73,29,103,82]
+            }
+        ]
+
+        const result = student.filter(stu => stu.age > 18).map(stu => {
+            const avg = stu.marks.reduce((sum, mark) => sum + mark,0) / stu.marks.length;
+            return avg;
+        })
+
+        console.log(result);
+        
+
+        // product object 
+        // name,category,price,rating
+         
+        // electronics
+        // avg
+        // > 5
+
+
+    </script>
+</body>
+</html>

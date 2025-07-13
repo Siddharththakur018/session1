@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // map, filter and reduce
+
+
+        //map
+        const numbers = [1,2,3,4];
+        
+        const doubled = numbers.map(a => a * 2);
+        console.log(doubled);
+        
+
+        const stringified = numbers.map(num => "No. " + num);
+        console.log(stringified);
+
+        // const isEven = numbers.map(num => num % 2 === 0);
+        // console.log(isEven);
+        
+        // filter 
+        const mixed = [10,20,35,40,50];
+
+        const over30 = mixed.filter(num => num > 30);
+        console.log(over30);
+
+        const even = mixed.map(num => num % 2 === 0);
+        console.log(even);
+        
+        // reduce
+
+        const prices = [10,20,30,40];
+        const total = prices.reduce((sum, price) => sum + price,10);
+        console.log(total);
+
+        const product = prices.reduce((acc, val) => acc % val, 20);
+        console.log(product);
+
+        const products = [
+            { name: "Laptop", category: "electronics", price: 800, ratings: [4, 5, 5] },
+            { name: "Shoes", category: "fashion", price: 50, ratings: [3, 4] },
+            { name: "Smartphone", category: "electronics", price: 600, ratings: [4, 4, 4] },
+            { name: "Washing Machine", category: "electronics", price: 300, ratings: [2, 3, 2] },
+            { name: "Headphones", category: "electronics", price: 100, ratings: [5, 4, 5] },
+        ];
+
+        const totalPrice = products
+        .filter(product => product.category === "electronics")
+        .map(product => {
+            const avgRating = product.ratings.reduce((sum, r) => sum + r, 0) / product.ratings.length;
+            return { ...product, avgRating };
+        })
+        .filter(product => product.avgRating >= 4.0)
+        .reduce((sum, product) => sum + product.price, 0);
+
+console.log(totalPrice);
+        
+
+        
+
+
+
+
+
+        
+        
+    </script>
+</body>
+</html>
